@@ -12,6 +12,7 @@ class Start extends Component {
     return (
       <View style={styles.background}>
         <ImageBackground source={require('../../assets/background.png')} resizeMode='cover' style={styles.image}>
+          <Text style={styles.title}>Hello-World-Chat</Text>
         </ImageBackground>
         <View style={styles.container}>
           <TextInput
@@ -61,11 +62,18 @@ class Start extends Component {
 
 const styles = StyleSheet.create({
   image: {
-  flex: 1,
-  width: '100%',
-  flexDirection: 'column',
-  alignItems: 'center',
-},
+    flex: 1,
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  title: {
+    color: '#FFF',
+    fontSize: '4em',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '2em',
+  },
   background: {
     width: '100%',
     height: '100%',
