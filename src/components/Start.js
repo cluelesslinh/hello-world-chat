@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ImageBackground, StyleSheet, Text, View, Button } from 'react-native';
+import { ColorPicker, TriangleColorPicker, toHsv, fromHsv } from 'react-native-color-picker';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 class Start extends Component {
@@ -8,7 +9,16 @@ class Start extends Component {
     super(props);
     this.state = { username: '' };
   }
+
   render() {
+
+  const Picker = () => (
+    <ColorPicker
+      onColorSelected={color => alert(`Color selected: ${color}`)}
+      style={{flex: 1}}
+    />
+  )
+
     return (
       <View style={styles.background}>
         <ImageBackground source={require('../../assets/background.png')} resizeMode='cover' style={styles.image}>
@@ -23,6 +33,8 @@ class Start extends Component {
           />
           <View>
             <Text style={styles.text}>Choose Background Color</Text>
+              <View>
+              </View>
             <View style={styles.chatBackgroundColor}>
               <TouchableOpacity
                 style={styles.color1}
